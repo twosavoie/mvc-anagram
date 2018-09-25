@@ -1,0 +1,11 @@
+
+<h1 class="header">Anagrams for <%= "#{@word}" %></h1>
+<div class="list">
+<ul class="anagram-list">
+  <% if !@anagrams.nil? %>
+    <% @anagrams.each do |word| %>
+      <li class="anagrams"><%= "#{word}" %></li>
+    <% end %>
+  <% end %>
+</ul>
+</div>

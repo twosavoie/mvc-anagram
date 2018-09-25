@@ -1,0 +1,78 @@
+.main {
+  background: #f8f8f8; 
+  background: url('img/tiles-01.png');
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  margin-top: 200px;
+}
+
+.window {
+  background: rgba(250, 157, 213, 0.1);
+  color: rgb(250, 157, 213); /*#fff;*/
+  border-radius: 10px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.header {
+  text-align: center;
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.form {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.list {
+  margin-top: 100px;
+}
+
+.anagram-list {
+  list-style-type: none;
+  text-align: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+li .anagrams {
+  font-size: 30px;
+  align-items: center;
+}
+
+/* .container {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+} */ /* wanted to center the content but it didn't work */
+
+/*.window { /* took from other assignment - provides nice background
+   /* set the display to flex and use the justify-content & align-items properties to center the text within the div*/
+/*   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(0, 0, 14, 0.19);
+   color: #fff;
+   border-radius: 10px;
+
+   width: 50%; /* 600px; */
+/*   height: 150px; /* not sure about this */
+/*} */
+
+/*.container {
+
+    /* set the display to flex and use the justify-content & align-items properties to center all child elements on the page */
+/*    display: flex; */
+/*    justify-content: center; */
+/*    align-items: center;
+    margin: 0;
+    height: 100%;
+    width: 100%; */
+/*} */
