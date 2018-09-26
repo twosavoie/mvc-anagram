@@ -1,5 +1,9 @@
+body {
+  
+}
 .main {
-  background: #f8f8f8; 
+
+  background: #f8f8f8;
   background: url('img/tiles-01.png');
   font-family: 'Montserrat', sans-serif;
 }
@@ -20,12 +24,17 @@
   text-align: center;
   font-size: 100px;
   font-weight: 700;
+
 }
 
 .form {
   margin-top: 100px;
   text-align: center;
   font-size: 40px;
+}
+
+input.btn {
+  background-color: #fff;
 }
 
 .list {
