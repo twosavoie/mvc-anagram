@@ -1,5 +1,5 @@
 body {
-  
+
 }
 .main {
 
@@ -24,7 +24,6 @@ body {
   text-align: center;
   font-size: 100px;
   font-weight: 700;
-
 }
 
 .form {
@@ -51,6 +50,12 @@ input.btn {
 li .anagrams {
   font-size: 30px;
   align-items: center;
+}
+
+.error {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
 }
 
 /* .container {
