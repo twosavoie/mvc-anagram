@@ -9,11 +9,14 @@ get '/anagrams/:word' do
 end
 
 post '/' do
-  word = params[:word]
-  if Word.valid_input?(word)
-    redirect "/anagrams/#{word}"
-  else
-    @error = "Three letters only please!" 
+  @word = params[:word] # do I need @word or word? pretty sure @word
+  begin # means "start watching out for an exception"
+#  if Word.valid_input?(word)
+  Word.valid_input(@word)
+    redirect "/anagrams/#{@word}"
+  rescue Exception => error # how to "rescue" the situation
+#  else
+    @error = error.message
     erb :index
   end
 end

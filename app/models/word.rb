@@ -18,11 +18,13 @@ class Word < ActiveRecord::Base
     end
   end
 
-  def self.valid_input?(input)
-    if three_letters?(input) && distinct_letters?(input)
-      true
-    else
-      false
+  def self.valid_input(input) # took out "?" because no longer T/F
+    if input.length > 3
+      raise Exception.new("Word must be less than or equal to 3 characters.")
+#    if three_letters?(input) && distinct_letters?(input)
+#      true
+#    else
+#      false # Taken out to refactor code with Exceptions
     end
   end
 

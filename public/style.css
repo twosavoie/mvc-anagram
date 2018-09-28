@@ -1,10 +1,8 @@
 body {
-
+  width: 100%;
 }
 .main {
-
-  background: #f8f8f8;
-  background: url('img/tiles-01.png');
+  background: rgba(250, 157, 213, 0.1);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -14,16 +12,18 @@ body {
 
 .window {
   background: rgba(250, 157, 213, 0.1);
-  color: rgb(250, 157, 213); /*#fff;*/
+  color: rgb(250, 157, 213);
   border-radius: 10px;
   padding-top: 50px;
   padding-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .header {
   text-align: center;
   font-size: 100px;
   font-weight: 700;
+
 }
 
 .form {
