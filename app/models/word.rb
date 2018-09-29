@@ -1,4 +1,12 @@
 class Word < ActiveRecord::Base
+  before_create :add_letters
+
+  def add_letters #this is an instance method rather than a class method
+    characters = self.text.chars # self in place of object name. within an instance method, self references the object you're calling the method on
+    alphabetized_characters = characters.sort
+    self.letters = alphabetized_characters.join
+#    word.save # do I need this? not in the lesson
+  end
 
   def self.three_letters?(input) #saw an answer with this after reverse
     if input.length <= 3
