@@ -1,5 +1,5 @@
 class Word < ActiveRecord::Base
-  before_create :add_letters
+  before_create :add_letters # some examples I found have _save in addition to or instead of _create
 
   def add_letters #this is an instance method rather than a class method
     characters = self.text.chars # self in place of object name. within an instance method, self references the object you're calling the method on
@@ -29,6 +29,8 @@ class Word < ActiveRecord::Base
   def self.valid_input(input) # took out "?" because no longer T/F
     if input.length > 3
       raise Exception.new("Word must be less than or equal to 3 characters.")
+    elsif distinct_letters?(input) == false
+      raise Exception.new("There are no anagrams for this word.")
 #    if three_letters?(input) && distinct_letters?(input)
 #      true
 #    else
