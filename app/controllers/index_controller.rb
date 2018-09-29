@@ -2,9 +2,14 @@ get '/' do
   erb :index
 end
 
+# get the input from the user. convert the input string into an array (chars), alphabetize it (sort) and re-form the string (join). Return an array (anagrams) from the db (letters) that matches the user's string (alphabetized_string). Return an array of AR objects (see show.erb)
 get '/anagrams/:word' do
   @word = params[:word]
-  @anagrams = Word.find_anagrams(@word)
+  alphabetized_string = @word.chars.sort.join
+  @anagrams = Word.where("letters=?", alphabetized_string)
+#  word_array = @word.chars.sort
+#  alphabetized_string = word_array.join
+#  @anagrams = Word.find_anagrams(@word)
   erb :show
 end
 
