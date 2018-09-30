@@ -11,7 +11,7 @@ get '/anagrams/:word' do
 end
 
 post '/' do
-  @word = params[:word] # do I need @word or word? pretty sure @word
+  @word = params[:word]
   begin # means "start watching out for an exception"
 #  if Word.valid_input?(word)
   Word.valid_input(@word)
