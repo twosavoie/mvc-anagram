@@ -67,3 +67,7 @@ a.word-link {
 a.edit-link {
   color: #5C0439;
 }
+
+.edit-word {
+  text-align: center;
+}
