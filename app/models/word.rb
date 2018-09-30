@@ -1,12 +1,10 @@
 class Word < ActiveRecord::Base
-  before_create :add_letters # some examples I found have _save in addition to or instead of _create
-#  before_save :add_letters
+  before_save :add_letters
 
   def add_letters #this is an instance method rather than a class method
     characters = self.text.chars # self in place of object name. within an instance method, self references the object you're calling the method on
     alphabetized_characters = characters.sort
     self.letters = alphabetized_characters.join
-#    word.save # do I need this? not in the lesson
   end
 
   def self.find_anagrams(string)
@@ -52,7 +50,7 @@ class Word < ActiveRecord::Base
   end
 
   def self.three_letters?(input) #saw an answer with this after reverse
-    if input.length <= 3
+    if input.length == 3
       true
     else
       false

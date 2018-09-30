@@ -3,13 +3,25 @@
   <thead>
     <th scope="col">Text</th>
     <th scope="col">Letters</th>
+    <th scope="col">Edit</th>
   </thead>
   <tbody>
 <!--    <% if !@word.all.nil? %> -->
     <% @word.each do |word| %>
       <tr>
-        <td><a href="<%= "/words/#{word.id}" %>"><%= "#{word.text}" %></a></td>
-        <td><%= "#{word.letters}" %></td>
+        <td>
+          <a href="<%= "/words/#{word.id}" %>">
+            <%= "#{word.text}" %>
+          </a>
+        </td>
+        <td>
+          <%= "#{word.letters}" %>
+        </td>
+        <td>
+          <a href="<%= "/words/#{word.id}/edit" %>">
+            Edit
+          </a>
+        </td>
       </tr>
     <% end %>
 <!--    <% end %> -->

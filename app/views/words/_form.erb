@@ -1,0 +1,16 @@
+<% if @error  %>  <!-- !@errors.blank? -->
+<p class='errors'>
+  <%= @error %> <!-- "#{@errors}" -->
+</p>
+<% end %>
+
+<!-- <div class="container"> -->
+  <form action="<%= words_form_action(@word) %>" method="post" id="<%= words_form_id(@word) %>" class="<%= words_form_class(@word) %>">
+    <input type="hidden" name="_method" value="<%= words_form_method(@word) %>" />
+    <div>
+      <label for="text">Enter a word</label>
+      <input name="text" type="text" value="<%= @word.text %>" />
+      <input type="submit" class="btn" />
+    </div>
+  </form>
+ <!-- </div> -->
