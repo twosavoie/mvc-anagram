@@ -1,13 +1,16 @@
 <h1 class="header">Words</h1>
 <table class="table table-striped">
   <thead>
-    <th scope="col">Text</th>
-    <th scope="col">Letters</th>
-    <th scope="col">Edit</th>
+    <tr>
+      <th scope="col">Text</th>
+      <th scope="col">Letters</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
   </thead>
   <tbody>
 <!--    <% if !@word.all.nil? %> -->
-    <% @word.each do |word| %>
+    <% @word.each do |word| %> 
       <tr>
         <td>
           <a href="<%= "/words/#{word.id}" %>">
@@ -18,9 +21,14 @@
           <%= "#{word.letters}" %>
         </td>
         <td>
-          <a href="<%= "/words/#{word.id}/edit" %>">
-            Edit
-          </a>
+          <a href="<%= "/words/#{word.id}/edit" %>">Edit</a>
+        </td>
+        <td>
+          <form action="<%= "/words/#{word.id}" %>" method="post">
+            <input type="hidden" name="_method" value="delete" />
+<!--            <input type="submit" value="Delete" /> -->
+            <button class="btn btn-danger" type="submit">Delete</button>
+          </form>
         </td>
       </tr>
     <% end %>

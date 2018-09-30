@@ -10,7 +10,7 @@ end
 
 post '/words' do
   @word = Word.create(text: params[:text])
-  redirect "/words/#{@word.id}" 
+  redirect "/words/#{@word.id}"
 end
 
 get '/words/:id/edit' do
@@ -28,4 +28,10 @@ end
 get '/words/:id' do
   @word = Word.find(params[:id])
   erb :"words/show"
+end
+
+delete '/words/:id' do
+  word = Word.find(params[:id])
+  word.delete
+  redirect "/words"
 end
