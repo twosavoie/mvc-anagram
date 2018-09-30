@@ -5,12 +5,9 @@
     <th scope="col">Letters</th>
   </thead>
   <tbody>
-
-    <% @word.each do |word| %>
       <tr>
-        <td><a href="<%= "/words/#{word.id}" %>"><%= "#{word.text}" %></a></td>
-        <td><%= "#{word.letters}" %></td>
+        <td></a><%= "#{@word.text}" %></td>
+        <td><%= "#{@word.letters}" %></td>
       </tr>
-    <% end %>
   </tbody>
 </table>
