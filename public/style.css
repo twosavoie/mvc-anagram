@@ -7,7 +7,7 @@
 }
 
 .container {
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .window {
@@ -54,4 +54,16 @@ li .anagrams {
   font-size: 30px;
   font-weight: 700;
   text-align: center;
+}
+
+form.new-word {
+  text-align: center;
+}
+
+a.word-link {
+  color: #BC0975;
+}
+
+a.edit-link {
+  color: #5C0439;
 }

@@ -49,14 +49,6 @@ class Word < ActiveRecord::Base
     reverse_letters
   end
 
-  def self.three_letters?(input) #saw an answer with this after reverse
-    if input.length == 3
-      true
-    else
-      false
-    end
-  end
-
   def self.distinct_letters?(input)
     letter_array = input.chars
     unique_letters = letter_array.uniq
@@ -68,9 +60,10 @@ class Word < ActiveRecord::Base
   end
 
   def self.valid_input(input) # took out "?" because no longer T/F
-    if input.length > 3
-      raise Exception.new("Word must be less than or equal to 3 characters.")
-    elsif distinct_letters?(input) == false
+#    if input.length > 3
+#      raise Exception.new("Word must be less than or equal to 3 characters.")
+#    elsif
+    if distinct_letters?(input) == false
       raise Exception.new("There are no anagrams for this word.")
 #    if three_letters?(input) && distinct_letters?(input)
 #      true
@@ -78,4 +71,13 @@ class Word < ActiveRecord::Base
 #      false # Taken out to refactor code with Exceptions
     end
   end
+
+#  def self.three_letters?(input) # Don't want to limit it 3 letter words
+#    if input.length == 3
+#      true
+#    else
+#      false
+#    end
+#  end
+
 end
